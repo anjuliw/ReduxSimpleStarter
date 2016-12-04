@@ -5,7 +5,7 @@ class SearchBar extends Component {
 		super(props);
 
 		// initialize state, only time anything is assigned to this.state
-		this.state = {term: '' };
+		this.state = {term: 'search' };
 	}
 
 	render() {
@@ -13,7 +13,10 @@ class SearchBar extends Component {
 		// event handler with arrow function
 		return (
 			<div>
-				<input onChange={event => this.setState({ term: event.target.value })} />
+				<input 
+					// make a controlled input
+					value={this.state.term}
+					onChange={event => this.setState({ term: event.target.value })} />
 			</div>
 			);
 	}
