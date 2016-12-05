@@ -11,7 +11,7 @@ class SearchBar extends Component {
 	render() {
 		// class components must have render method with some JSX
 		return (
-			<div>
+			<div className="search-bar">
 				<input 
 					// controlled input
 					value={this.state.term}
